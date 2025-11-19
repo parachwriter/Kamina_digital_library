@@ -29,7 +29,7 @@ API REST para gestión de biblioteca digital con FastAPI
 ### 1. Clonar el repositorio
 ```sh
 git clone https://github.com/parachwriter/Kamina_digital_library
-cd kamina-digital-library
+cd Kamina_digital_library
 ```
 ---
 ### 2. Crear entorno virtual
