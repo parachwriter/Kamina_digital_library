@@ -2,7 +2,7 @@
 API REST para gestión de biblioteca digital con FastAPI
 
 
-##Funciones del proyecto 
+## Funciones del proyecto 
 - Suite de Pruebas Unitarias utilizando **pytest**, incluyendo **mocks**
 - Gestión completa (CRUD) de **Usuarios, Autores y Libros**
 
