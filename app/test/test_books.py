@@ -7,9 +7,9 @@ from app.schemas.book import CreateBook
 from app.db.models.book import Book
 
 
-# ------------------------------------------------------------
+
 # TEST 1: REGISTRO DE LIBRO (CAMINO FELIZ)
-# ------------------------------------------------------------
+
 @pytest.mark.asyncio
 async def test_register_book_success(mocker):
     """
@@ -58,9 +58,9 @@ async def test_register_book_success(mocker):
     assert result.title == "Test Book"
 
 
-# ------------------------------------------------------------
+
 # TEST 2: ERROR CUANDO EL AUTOR NO EXISTE
-# ------------------------------------------------------------
+
 @pytest.mark.asyncio
 async def test_register_book_invalid_author(mocker):
     """

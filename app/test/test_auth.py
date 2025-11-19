@@ -6,9 +6,8 @@ from app.core.security import validate_password, encrypt_password
 
 client = TestClient(app)
 
-# ---------------------------------------------------------
 # TEST LOGIN SUCCESS
-# ---------------------------------------------------------
+
 def test_login_success():
     """Prueba login exitoso"""
     with patch('app.services.auth.authenticate_user', new_callable=AsyncMock) as mock_auth:
@@ -31,9 +30,9 @@ def test_login_success():
             assert body["token_type"] == "bearer"
 
 
-# ---------------------------------------------------------
+
 # TEST LOGIN INVALID CREDENTIALS
-# ---------------------------------------------------------
+
 def test_login_invalid_credentials():
     """Prueba login con credenciales inválidas"""
     with patch('app.services.auth.authenticate_user', new_callable=AsyncMock) as mock_auth:
@@ -47,9 +46,9 @@ def test_login_invalid_credentials():
         assert response.status_code == 401
 
 
-# ---------------------------------------------------------
+
 # TEST CURRENT USER SUCCESS
-# ---------------------------------------------------------
+
 def test_read_current_user_success():
     """Prueba obtener usuario actual"""
     mock_user = MagicMock()
@@ -70,9 +69,9 @@ def test_read_current_user_success():
         assert data["email"] == "test@example.com"
 
 
-# ---------------------------------------------------------
+
 # TEST CURRENT USER FAIL
-# ---------------------------------------------------------
+
 def test_read_current_user_unauthorized():
     with patch('app.core.security.get_current_user') as mock_get_user:
         mock_get_user.side_effect = Exception("Token inválido")
@@ -82,9 +81,9 @@ def test_read_current_user_unauthorized():
         assert response.status_code == 401
 
 
-# ---------------------------------------------------------
+
 # TEST LOGIN DEPENDENCY
-# ---------------------------------------------------------
+
 def test_login_dependency():
     from app.schemas.auth import LoginForm
 
@@ -95,9 +94,9 @@ def test_login_dependency():
     assert login_form.password == "StrongPass123"
 
 
-# ---------------------------------------------------------
+
 # TEST REGISTER USER SUCCESS
-# ---------------------------------------------------------
+
 def test_register_user_success():
     """Prueba el flujo de creación de usuario"""
     with patch('app.services.user_service.user_service.create_user') as mock_create_user:
@@ -120,9 +119,9 @@ def test_register_user_success():
         assert user_data.email == "test@example.com"
 
 
-# ---------------------------------------------------------
+
 # TEST AUTHENTICATE USER REAL PASSWORD VALIDATION
-# ---------------------------------------------------------
+
 def test_authenticate_user_real():
     """Prueba validar password real"""
     hashed = encrypt_password("StrongPass123")
@@ -131,9 +130,9 @@ def test_authenticate_user_real():
     assert validate_password("wrongpass", hashed) is False
 
 
-# ---------------------------------------------------------
+
 # TEST LOGIN WITH REAL DATA USING ASYNC
-# ---------------------------------------------------------
+
 @pytest.mark.asyncio
 async def test_login_with_real_data():
     with patch('app.crud.user_crud.get_user_by_email', new_callable=AsyncMock) as mock_get_user:

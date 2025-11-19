@@ -6,9 +6,9 @@ from app.services.user_service import user_service
 from app.db.models.user import User
 
 
-# ============================================================
+
 # CREATE USER
-# ============================================================
+
 @pytest.mark.asyncio
 async def test_create_user_with_mock(mocker):
     """Debe llamar a user_crud.create_user después de validar email."""
@@ -56,9 +56,9 @@ async def test_create_user_duplicate_email(mocker):
     assert exc.value.detail == "Email already in use"
 
 
-# ============================================================
+
 # UPDATE USER
-# ============================================================
+
 @pytest.mark.asyncio
 async def test_update_user_success(mocker):
     """Debe actualizar correctamente el nombre del usuario."""
@@ -127,9 +127,9 @@ async def test_update_user_password(mocker):
     assert result.password_hash == "new_hash"
 
 
-# ============================================================
+
 # AUTHENTICATION
-# ============================================================
+
 @pytest.mark.asyncio
 async def test_authenticate_success(mocker):
     """Debe autenticar correctamente si email y password coinciden."""
@@ -171,9 +171,9 @@ async def test_authenticate_wrong_password(mocker):
     assert exc.value.detail == "Incorrect email or password"
 
 
-# ============================================================
+
 # GET USERS
-# ============================================================
+
 @pytest.mark.asyncio
 async def test_get_all_users_success(mocker):
     mock_session = AsyncMock()
@@ -204,9 +204,9 @@ async def test_get_all_users_empty(mocker):
     assert exc.value.detail == "No users registered"
 
 
-# ============================================================
+
 # DELETE USER
-# ============================================================
+
 @pytest.mark.asyncio
 async def test_delete_user_success(mocker):
     """Debe eliminar el usuario si existe."""
