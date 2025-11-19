@@ -1,2 +1,18 @@
+# Entorno virtual
 .venv/
 venv/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+
+# Reportes de cobertura
+htmlcov/
+.coverage
+
+# Archivos de entorno
+.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
