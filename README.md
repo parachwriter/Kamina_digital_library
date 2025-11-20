@@ -40,6 +40,13 @@ source .venv/bin/activate  # Linux/Mac
 .venv\Scripts\activate     # Windows
 
 pip install -r requirements.txt
+
+en caso de no responder en windows al ejecutar en bash, emplear 
+py --version
+si esto responde entonces usar 
+
+py -m venv .venv
+
 ```
 
 ---
