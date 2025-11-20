@@ -17,7 +17,7 @@ API REST para gestión de biblioteca digital con FastAPI
 ---
 
 ##  Requisitos
-- Python 3.11+
+- Python 3.11
 - pip
 - PostgreSQL 12+
 - Docker (opcional pero recomendado)
