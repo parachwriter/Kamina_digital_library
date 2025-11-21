@@ -1,0 +1,290 @@
+{
+  "repo_notes": [
+    {
+      "content": ""
+    }
+  ],
+  "pages": [
+    {
+      "title": "Home",
+      "purpose": "Introduce the Kamina Digital Library system, explaining its purpose as a FastAPI-based REST API for digital library management with CRUD operations, book search, loan management, and JWT authentication",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Getting Started",
+      "purpose": "Guide users through setting up and running the Kamina Digital Library, from installation to first API request",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Prerequisites and Installation",
+      "purpose": "Detail the required dependencies (Python, PostgreSQL, pip packages) and step-by-step installation instructions including virtual environment setup",
+      "parent": "Getting Started",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Configuration",
+      "purpose": "Explain the .env file configuration including DATABASE_URL, SECRET_KEY, ACCESS_TOKEN_EXPIRE_MINUTES, and other environment variables",
+      "parent": "Getting Started",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Database Setup",
+      "purpose": "Walk through creating the PostgreSQL database and running the create_tables.py script to initialize the schema",
+      "parent": "Getting Started",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Running the Application",
+      "purpose": "Explain how to start the Uvicorn server, access the API, and explore the Swagger UI documentation interface",
+      "parent": "Getting Started",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "System Architecture",
+      "purpose": "Provide comprehensive documentation of the system's architectural design, component organization, and data flow patterns, threre is no loan.py",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Architecture Overview",
+      "purpose": "Present the high-level architecture including the layered design (API, Service, CRUD, Model layers) and how components interact, threre is no loan.py",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Request Lifecycle",
+      "purpose": "Trace how an HTTP request flows through the system from API router through services, CRUD operations, and database access, threre is no loan.py",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Layer Architecture Deep Dive",
+      "purpose": "Detailed explanation of each architectural layer (routers, services, schemas, CRUD, models) with examples from the codebase, threre is no loan.py",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Core Features",
+      "purpose": "Document the main functional capabilities of the digital library system including entity management and business operations, threre is no loan.py",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "User Management",
+      "purpose": "Explain user registration, authentication, profile management, and CRUD operations with validation rules and password security, threre is no loan.py",
+      "parent": "Core Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Book Catalog Management",
+      "purpose": "Detail book creation, updates, deletion, and inventory management including author validation and relationship handling, threre is no loan.py",
+      "parent": "Core Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Book Search Functionality",
+      "purpose": "Explain the search feature that allows finding books by title, author name, or publication date with examples",
+      "parent": "Core Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "API Reference",
+      "purpose": "Comprehensive reference documentation for all API endpoints including request/response formats and authentication requirements",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Authentication Endpoints",
+      "purpose": "Document /auth/login and /auth/me endpoints with request formats, response structures, and token handling",
+      "parent": "API Reference",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "User Endpoints",
+      "purpose": "Document all user-related endpoints including registration, retrieval, updates, and deletion with validation rules",
+      "parent": "API Reference",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Book Endpoints",
+      "purpose": "Document book management endpoints including CRUD operations and search functionality with query parameter examples",
+      "parent": "API Reference",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Author and Loan Endpoints",
+      "purpose": "Document author management and loan system endpoints including borrowing, returning, and loan history operations",
+      "parent": "API Reference",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Security and Authentication",
+      "purpose": "Explain the security architecture including JWT implementation, password hashing, and authorization mechanisms",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "JWT Authentication",
+      "purpose": "Detail JWT token generation, validation, expiration handling, and how tokens secure API endpoints",
+      "parent": "Security and Authentication",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Password Security",
+      "purpose": "Explain password hashing with encryption, validation logic, strength requirements, and secure storage practices",
+      "parent": "Security and Authentication",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Data Models and Schemas",
+      "purpose": "Document the data structures including database models and Pydantic validation schemas that define the system's data contracts",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Database Models",
+      "purpose": "Detail the SQLAlchemy ORM models for Users, Authors, Books, and Loans including fields, relationships, and constraints",
+      "parent": "Data Models and Schemas",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Pydantic Validation Schemas",
+      "purpose": "Explain the Pydantic schemas used for request validation and response serialization with examples from UserCreate, UserOut, etc.",
+      "parent": "Data Models and Schemas",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Testing",
+      "purpose": "Comprehensive guide to the test infrastructure, test suites, and testing practices used to ensure code quality",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Test Infrastructure",
+      "purpose": "Explain the pytest configuration, fixtures (session, client), temporary database setup, and dependency override mechanisms",
+      "parent": "Testing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Test Suites Overview",
+      "purpose": "Document the test_auth, test_users, and test_books test suites including what they test and how to run them with coverage",
+      "parent": "Testing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Development Guide",
+      "purpose": "Guide for developers working on the codebase including project structure, coding patterns, and contribution guidelines",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    }
+  ]
+}The content has been copied to your clipboard. Please paste it here to complete the file creation.
