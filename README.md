@@ -69,7 +69,13 @@ Se usó PostgreSQL, para tenerlo corriendo ejecutar:
 ```bash
 createdb kamina
 ```
+Para levantar el contenedor, usar el siguiente comando: 
+```bash
 
+postgresql+asyncpg://admin:admin123@localhost:5432/kamina
+
+
+```
 ### 5. Crear tablas de la base de datos 
 ```bash
 python app/test/create_tables.py
