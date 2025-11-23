@@ -37,6 +37,7 @@ python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
 # o
 .venv\Scripts\activate     # Windows
+source .venv\Scripts\activate  # En caso que el comando de arriba no funcione
 
 pip install -r requirements.txt
 ```
