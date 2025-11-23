@@ -73,7 +73,8 @@ createdb kamina
 Para levantar el contenedor, usar el siguiente comando: 
 ```bash
 
-postgresql+asyncpg://admin:admin123@localhost:5432/kamina
+docker run -d --name kamina-postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin123 -e POSTGRES_DB=kamina -p 5432:5432 postgres:15
+
 
 
 ```
