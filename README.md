@@ -89,7 +89,15 @@ python -m app.test.create_tables
 python -m app.test.create_tables
 
 ```
+### 6. Comprobar desde la base de datos la creacion de las tablas
+```bash
+docker exec -it kamina-postgres psql -U admin -d kamina
+```
+entonces usar
+```bash
+\dt
 
+```
 
 ---
 
