@@ -66,13 +66,10 @@ SECRET_KEY=mi_secreta_clave_super_segura_123456
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
 
-### 4. Crear base de datos
+### 4. Crear base de datos en docker
 
-Se usó PostgreSQL, para tenerlo corriendo ejecutar:
-```bash
-createdb kamina
-```
-Para levantar el contenedor, usar el siguiente comando: 
+
+Para levantar el contenedor PostgreSQL, usar el siguiente comando: 
 ```bash
 
 docker run -d --name kamina-postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin123 -e POSTGRES_DB=kamina -p 5432:5432 postgres:15
