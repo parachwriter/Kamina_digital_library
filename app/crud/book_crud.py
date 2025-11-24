@@ -15,6 +15,12 @@ async def get_books(db: AsyncSession) -> List[Book]:
 async def get_book_by_id(db: AsyncSession, book_id: int) -> Optional[Book]:
     result = await db.execute(select(Book).where(Book.id == book_id))
     return result.scalar_one_or_none()
+#Obtener por ID de autor 
+async def get_books_by_author_id(db: AsyncSession, author_id: int) -> List[Book]:
+    result = await db.execute(select(Book).where(Book.author_id == author_id))
+    return result.scalars().all()
+
+
 # Crear 
 async def create_book(db: AsyncSession, book: Book) -> Book:
     db.add(book)

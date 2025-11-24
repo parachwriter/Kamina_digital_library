@@ -1,6 +1,7 @@
 import asyncio
 from app.db.base import Base
 from app.db.session import engine
+from app.db.models import user, author, book
 
 async def init_models():
     async with engine.begin() as conn:
@@ -8,4 +9,6 @@ async def init_models():
         await conn.run_sync(Base.metadata.create_all)
     print("Tablas creadas correctamente")
 
-asyncio.run(init_models())
+    
+if __name__ == "__main__":
+    asyncio.run(init_models())

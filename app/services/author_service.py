@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.models.author import Author
 from app.schemas.author import CreateAuthor, UpdateAuthor
-from app.crud import author_crud
+from app.crud import author_crud, book_crud
 
 class AuthorService:
 
@@ -52,6 +52,14 @@ class AuthorService:
     # Eliminar autor
     async def delete(self, session: AsyncSession, author_id: int) -> None:
         author = await self.get_by_id_with_validation(session, author_id)
+
+        books = await book_crud.get_books_by_author_id(session, author_id)
+        if books:  # Si hay libros asociados
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Cannot delete an author that has books associated"
+            )
+
         await author_crud.delete_author(session, author)
 
 # Instancia global
