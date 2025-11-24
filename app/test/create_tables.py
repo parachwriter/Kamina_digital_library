@@ -1,6 +1,7 @@
 import asyncio
 from app.db.base import Base
 from app.db.session import engine
+from app.db.models import user, author, book
 
 async def init_models():
     async with engine.begin() as conn:
