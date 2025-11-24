@@ -38,8 +38,8 @@ source .venv/bin/activate  # Linux/Mac
 # o
 .venv\Scripts\activate     # Windows
 source .venv/Scripts/Activate  # En caso que el comando de arriba no funcione
-
 pip install -r requirements.txt
+
 ```
 
 En caso de no responder en Windows al ejecutar en bash, emplear:
@@ -50,8 +50,10 @@ Si esto responde entonces usar:
 ```bash
 py -m venv .venv
 py -3.11 -m venv .venv
-
+pip install -r requirements.txt
 ```
+
+Una vez iniciado el 
 
 ### 3. Configurar variables de entorno
 
