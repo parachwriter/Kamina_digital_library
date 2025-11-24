@@ -77,6 +77,8 @@ docker run -d --name kamina-postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD
 
 
 ```
+## Usar la extensión de elección propia para establecer la conexión con la base de datos
+
 ### 5. Crear tablas de la base de datos 
 ```bash
 python app/test/create_tables.py
