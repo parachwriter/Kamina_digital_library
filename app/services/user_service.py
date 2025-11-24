@@ -2,6 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import HTTPException, status
 from app.crud import user_crud
 from app.db.models.user import User
+from app.db.models.book import Book
 from app.core.security import encrypt_password, validate_password
 from sqlalchemy import select
 from typing import Optional
@@ -90,10 +91,29 @@ class UserService:
         return await user_crud.update_user(session, user)
 
     # Eliminar usuario
+    
+    
+    
+
     async def delete_user(self, session: AsyncSession, user_id: int) -> None:
+        # Primero obtenemos el usuario para validar que existe
         user = await self.get_by_id_with_validation(session, user_id)
+        
+        # Verificar si el usuario tiene libros prestados
+        stmt = select(Book).where(Book.borrower_id == user_id)
+        result = await session.execute(stmt)
+        borrowed_books = result.scalars().all()
+        
+        if borrowed_books:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"No se puede eliminar al usuario porque tiene {len(borrowed_books)} libro(s) prestado(s)"
+            )
+    
+    # Si todo está bien, eliminamos el usuario
         await user_crud.delete_user(session, user)
 
+        
 
 # Instancia global
 user_service = UserService()
