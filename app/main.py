@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.routers import user_router, author_router, book_router, auth
-from app.exceptions import register_exception_handler
+#from app.exceptions import register_exception_handler
 
 app = FastAPI()
 
@@ -10,7 +10,7 @@ app.include_router(user_router.router)
 app.include_router(book_router.router)
 app.include_router(author_router.router)
 
-register_exception_handler(app)
+#register_exception_handler(app)
 
 @app.get("/")
 async def root():
