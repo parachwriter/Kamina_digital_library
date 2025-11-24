@@ -7,7 +7,7 @@
   "pages": [
     {
       "title": "Home",
-      "purpose": "Introduce the Kamina Digital Library system, explaining its purpose as a FastAPI-based REST API for digital library management with CRUD operations, book search, loan management, and JWT authentication",
+      "purpose": "Introduce the Kamina Digital Library system, explaining its purpose as a FastAPI-based REST API for digital library management with CRUD operations, book search, loan management but there is no \"loan.py\" or something like that, and JWT authentication",
       "page_notes": [
         {
           "content": ""
@@ -65,7 +65,7 @@
     },
     {
       "title": "System Architecture",
-      "purpose": "Provide comprehensive documentation of the system's architectural design, component organization, and data flow patterns, threre is no loan.py",
+      "purpose": "Provide comprehensive documentation of the system's architectural design, component organization, and data flow patterns",
       "page_notes": [
         {
           "content": ""
@@ -74,7 +74,7 @@
     },
     {
       "title": "Architecture Overview",
-      "purpose": "Present the high-level architecture including the layered design (API, Service, CRUD, Model layers) and how components interact, threre is no loan.py",
+      "purpose": "Present the high-level architecture including the layered design (API, Service, CRUD, Model layers) and how components interact",
       "parent": "System Architecture",
       "page_notes": [
         {
@@ -84,7 +84,7 @@
     },
     {
       "title": "Request Lifecycle",
-      "purpose": "Trace how an HTTP request flows through the system from API router through services, CRUD operations, and database access, threre is no loan.py",
+      "purpose": "Trace how an HTTP request flows through the system from API router through services, CRUD operations, and database access",
       "parent": "System Architecture",
       "page_notes": [
         {
@@ -94,7 +94,7 @@
     },
     {
       "title": "Layer Architecture Deep Dive",
-      "purpose": "Detailed explanation of each architectural layer (routers, services, schemas, CRUD, models) with examples from the codebase, threre is no loan.py",
+      "purpose": "Detailed explanation of each architectural layer (routers, services, schemas, CRUD, models) with examples from the codebase",
       "parent": "System Architecture",
       "page_notes": [
         {
@@ -104,7 +104,7 @@
     },
     {
       "title": "Core Features",
-      "purpose": "Document the main functional capabilities of the digital library system including entity management and business operations, threre is no loan.py",
+      "purpose": "Document the main functional capabilities of the digital library system including entity management and business operations",
       "page_notes": [
         {
           "content": ""
@@ -113,7 +113,7 @@
     },
     {
       "title": "User Management",
-      "purpose": "Explain user registration, authentication, profile management, and CRUD operations with validation rules and password security, threre is no loan.py",
+      "purpose": "Explain user registration, authentication, profile management, and CRUD operations with validation rules and password security",
       "parent": "Core Features",
       "page_notes": [
         {
@@ -123,7 +123,17 @@
     },
     {
       "title": "Book Catalog Management",
-      "purpose": "Detail book creation, updates, deletion, and inventory management including author validation and relationship handling, threre is no loan.py",
+      "purpose": "Detail book creation, updates, deletion, and inventory management including author validation and relationship handling",
+      "parent": "Core Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Loan System (Préstamos)",
+      "purpose": "Describe the loan management system for borrowing and returning books, tracking due dates, and managing book availability",
       "parent": "Core Features",
       "page_notes": [
         {
@@ -287,4 +297,4 @@
       ]
     }
   ]
-}The content has been copied to your clipboard. Please paste it here to complete the file creation.
+}
